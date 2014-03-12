@@ -1,5 +1,10 @@
 Results for 1M rows
 ===================
+    py3     : 0.77
+    py2     : 0.81
+    pypy    : 1.28
+    go      : 1.75
+    node.js : 2.47
 
 GO
 ---
@@ -16,32 +21,63 @@ GO
     0.11262346   format result_hast to table
 
 
-PY 2.7.6
---------
+NodeJs v0.10.26
+---------------
     K = 100000
-    0.68970418  d1 list
-    0.02689290  d2 list
+    0.279   d1 list
+    0.068   d2 list
 
     --- start join
-    0.03684616  d2 hash
-    0.74472117  d1 part of result hash
-    0.04486609  add d2 part to result hash
-    --- full join time: 0.826585054398
+    0.146   d2 hash
+    2.005   d1 part of result hash
+    0.311   add d2 part of result hash
+    --- full join time: 2.473 
 
-    1.58251095  format result_hast to table
+    0.831   format result_hast to table
 
 
-PY 3.3.5
---------
+
+Python v2.7.6
+-------------
     K = 100000
-    0.58259225  d1 list
-    0.02027702  d2 list
+    0.68836093  d1 list
+    0.02568698  d2 list
 
     --- start join
-    0.03363848  d2 hash
-    0.71283388  d1 part of result hash
-    0.04388213  add d2 part to result hash
-    --- full join time: 0.7905449867248535
+    0.03631616  d2 hash
+    0.72987103  d1 part of result hash
+    0.04458809  add d2 part to result hash
+    --- full join time: 0.810923099518
 
-    0.47126508  format result_hast to table
+    1.56242704  format result_hast to table
+
+
+Python v3.3.5
+-------------
+    K = 100000
+    0.57706189d1 list
+    0.02021503d2 list
+
+    --- start join
+    0.03339791d2 hash
+    0.69553232d1 part of result hash
+    0.04203367add d2 part to result hash
+    --- full join time: 0.7711665630340576
+
+    0.47044921format result_hast to table
+
+
+PyPy v2.2.1
+-----------
+    K = 100000
+    0.29356599  d1 list
+    0.02470613  d2 list
+
+    --- start join
+    0.25577497  d2 hash
+    0.99361682  d1 part of result hash
+    0.03890204  add d2 part to result hash
+    --- full join time: 1.28859591484
+
+    0.53422403  format result_hast to table
 
