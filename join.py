@@ -33,7 +33,7 @@ print('%0.8f\t%s' % (time.time() - t, 'd1 part of result hash'))
 t = time.time()
 for a, b, c in d2:
     if (a, b) not in result_hash:
-        result_hash[(a, b)] = (a, b, None, c)
+        result_hash[(a, b)] = (None, c)
 print('%0.8f\t%s' % (time.time() - t, 'add d2 part to result hash'))
 
 print('--- full join time: %s\n' % (time.time() - tjoin))
